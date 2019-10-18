@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Açougue</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+</head>
+
+<body>
+
+  <div id="app">
+    <router-view></router-view>
+  </div>
+
+  <script src="./util/translate.js"></script>
+  <script src="./api/apimock.js"></script>
+  <script src="./components/menu.js"></script>
+  <script src="./screens/login.js"></script>
+  <script src="./screens/dashboard.js"></script>
+  <script src="./screens/products.js"></script>
+  <script src="./util/router.js"></script>
+  <script>
+
+    // const store = new Vuex.Store({
+    //   state: {
+    //     router: router
+    //   }
+    // })
+
+    // console.log(store.router);
+
+
+    const app = new Vue({
+      router,
+      vuetify: new Vuetify(),
+      data: {}
+    }).$mount('#app')
+
+  </script>
+
+</body>
+
+</html>
